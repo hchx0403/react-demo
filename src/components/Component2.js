@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Page1() {
+export default function Component2() {
     return (
         <div>
-           Page1
+           Component2
         </div>
     )
 }
