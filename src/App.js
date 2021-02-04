@@ -5,7 +5,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
-function App() {
+function App() {  
   return (
   
     <Router>
@@ -20,5 +20,3 @@ function App() {
 }
 
 export default App;
-
-
