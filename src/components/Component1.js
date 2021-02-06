@@ -1,65 +1,80 @@
-import React from 'react'
-import 'antd/dist/antd.css';
-import { Menu } from 'antd';
-import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-
+import React from "react";
+import "antd/dist/antd.css";
+import { Layout, Menu, Breadcrumb } from "antd";
+import {
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
-
-
-  handleClick = e => {
-    console.log('click ', e);
-    this.setState({ current: e.key });
-  };
-
-
-
-
-
-
+const { Header, Content, Sider } = Layout;
+    
 export default function Component1() {
-    return (
-        const { SubMenu } = Menu;
+  return (
+    <div>
+    <Layout>
+    <Header className="header">
+      <div className="logo" />
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
+        <Menu.Item key="1">模块1</Menu.Item>
+        <Menu.Item key="2">模块2</Menu.Item>
+        <Menu.Item key="3">模块3</Menu.Item>
+      </Menu>
+    </Header>
+    <Layout>
+      <Sider width={200} className="site-layout-background">
+        <Menu
+          mode="inline"
+          defaultSelectedKeys={["1"]}
+          defaultOpenKeys={["sub1"]}
+          style={{ height: "100%", borderRight: 0 }}
+        >
+          <SubMenu key="sub1" icon={<UserOutlined />} title="传感器信息库">
+            <Menu.Item key="1">压力传感器</Menu.Item>
+            <Menu.Item key="2">温度传感器</Menu.Item>
+            <Menu.Item key="3">电流传感器</Menu.Item>
+            <Menu.Item key="4">振动传感器</Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
+            <Menu.Item key="5">option5</Menu.Item>
+            <Menu.Item key="6">option6</Menu.Item>
+            <Menu.Item key="7">option7</Menu.Item>
+            <Menu.Item key="8">option8</Menu.Item>
+          </SubMenu>
+          <SubMenu key="sub3" icon={<NotificationOutlined />} title="subnav 3">
+            <Menu.Item key="9">option9</Menu.Item>
+            <Menu.Item key="10">option10</Menu.Item>
+            <Menu.Item key="11">option11</Menu.Item>
+            <Menu.Item key="12">option12</Menu.Item>
+          </SubMenu>
+        </Menu>
+      </Sider>
+      <Layout style={{ padding: "0 24px 24px" }}>
+        <Breadcrumb style={{ margin: "16px 0" }}>
+          <Breadcrumb.Item>Home</Breadcrumb.Item>
+          <Breadcrumb.Item>List</Breadcrumb.Item>
+          <Breadcrumb.Item>App</Breadcrumb.Item>
+        </Breadcrumb>
+        <Content
+          className="site-layout-background"
+          style={{
+            padding: 24,
+            margin: 0,
+            minHeight: 280
+          }}
+        >
+          Content
 
-        class App extends React.Component {
-          state = {
-            current: 'mail',
-          };
-        
-          handleClick = e => {
-            console.log('click ', e);
-            this.setState({ current: e.key });
-          };
-        
-          render() {
-            const { current } = this.state;
-            return (
-              <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
-                <Menu.Item key="mail" icon={<MailOutlined />}>
-                  Navigation One
-                </Menu.Item>
-                <Menu.Item key="app" disabled icon={<AppstoreOutlined />}>
-                  Navigation Two
-                </Menu.Item>
-                <SubMenu key="SubMenu" icon={<SettingOutlined />} title="Navigation Three - Submenu">
-                  <Menu.ItemGroup title="Item 1">
-                    <Menu.Item key="setting:1">Option 1</Menu.Item>
-                    <Menu.Item key="setting:2">Option 2</Menu.Item>
-                  </Menu.ItemGroup>
-                  <Menu.ItemGroup title="Item 2">
-                    <Menu.Item key="setting:3">Option 3</Menu.Item>
-                    <Menu.Item key="setting:4">Option 4</Menu.Item>
-                  </Menu.ItemGroup>
-                </SubMenu>
-                <Menu.Item key="alipay">
-                  <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-                    Navigation Four - Link
-                  </a>
-                </Menu.Item>
-              </Menu>
-            );
-          }
-        }
-        
-    )
+
+
+
+
+          
+        </Content>
+      </Layout>
+    </Layout>
+  </Layout>,
+  </div>
+  )
 }
