@@ -5,9 +5,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
-function App() {  
+function App() {
   return (
-  
+
     <Router>
       <Switch>
         <Route path="/" exact={true} component={Page1} />
@@ -15,9 +15,8 @@ function App() {
       </Switch>
     </Router>
 
-    
+
   );
 }
 
 export default App;
-  

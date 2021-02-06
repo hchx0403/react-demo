@@ -7,6 +7,10 @@ import {
   NotificationOutlined
 } from "@ant-design/icons";
 
+import Sensor_describe_text from "./Sensor_descibe_text";
+import Sensor_describe_file from "./Sensor_describe_file";
+import Sensor_describe_picture from "./Sensor_describe_picture";
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
     
@@ -64,13 +68,10 @@ export default function Component1() {
             minHeight: 280
           }}
         >
-          Content
-
-
-
-
-
-          
+          传感器简介
+          <Sensor_describe_text />;
+          <Sensor_describe_file />;
+          <Sensor_describe_picture />;
         </Content>
       </Layout>
     </Layout>
