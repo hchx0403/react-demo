@@ -12,7 +12,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-
     <Router>
       <Switch>
         <Route path="/" exact={true} component={Page0} />
@@ -22,8 +21,6 @@ function App() {
         <Route path="/Page4" exact={true} component={Page4} />
       </Switch>
     </Router>
-
-
   );
 }
 

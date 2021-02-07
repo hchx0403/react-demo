@@ -11,7 +11,7 @@ import {
 import Sensor_describe_text from "../components/Sensor_descibe_text";
 import Sensor_describe_file from "../components/Sensor_describe_file";
 import Sensor_describe_picture from "../components/Sensor_describe_picture";
-
+import { Link } from 'react-router-dom';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
     
@@ -36,8 +36,8 @@ export default function Page2() {
           style={{ height: "100%", borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="设计元件库">
-            <Menu.Item key="1">材料库</Menu.Item>
-            <Menu.Item key="2">传感器库</Menu.Item>
+            <Menu.Item key="1"><Link to="/Page1/">材料库</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="/Page2/">传感器库</Link></Menu.Item>
             <Menu.Item key="3">成品件库</Menu.Item>
             <Menu.Item key="4">自制件库</Menu.Item>
           </SubMenu>

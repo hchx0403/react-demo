@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import React from "react";
 import "antd/dist/antd.css";
 import { Layout, Menu, Breadcrumb } from "antd";
@@ -7,10 +7,6 @@ import {
   LaptopOutlined,
   NotificationOutlined
 } from "@ant-design/icons";
-
-import Sensor_describe_text from "../components/Sensor_descibe_text";
-import Sensor_describe_file from "../components/Sensor_describe_file";
-import Sensor_describe_picture from "../components/Sensor_describe_picture";
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -36,8 +32,8 @@ export default function Page1() {
           style={{ height: "100%", borderRight: 0 }}
         >
           <SubMenu key="sub1" icon={<UserOutlined />} title="设计元件库">
-            <Menu.Item key="1">材料库</Menu.Item>
-            <Menu.Item key="2">传感器库</Menu.Item>
+            <Menu.Item key="1"><Link to="/Page1/">材料库</Link></Menu.Item>
+            <Menu.Item key="2"><Link to="/Page2/">传感器库</Link></Menu.Item>
             <Menu.Item key="3">成品件库</Menu.Item>
             <Menu.Item key="4">自制件库</Menu.Item>
           </SubMenu>
@@ -70,20 +66,8 @@ export default function Page1() {
           }}
         >
           
-          <div className="App-page1-01">
-               <p>传感器简介</p>
-               <Sensor_describe_text />
-          </div> 
-
-          <div className="App-page1-02">
-               <p>传感器外形照片</p>
-                <Sensor_describe_picture />
-          </div>
-          <div className="App-page1-03">
-              <p>传感器产品资料</p>
-              <Sensor_describe_file />
-              <p>传感器数模</p>
-              <Sensor_describe_file />
+          <div >
+           空白
           </div>
         </Content>
       </Layout>
