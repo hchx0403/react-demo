@@ -15,8 +15,8 @@ import Sensor_describe_picture from "../components/Sensor_describe_picture";
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
     
-export default function Component1() {
-  return (
+export default function Page1() {
+  return (    
     <div>
     <Layout>
     <Header className="header">
@@ -35,11 +35,11 @@ export default function Component1() {
           defaultOpenKeys={["sub1"]}
           style={{ height: "100%", borderRight: 0 }}
         >
-          <SubMenu key="sub1" icon={<UserOutlined />} title="传感器信息库">
-            <Menu.Item key="1">压力传感器</Menu.Item>
-            <Menu.Item key="2">温度传感器</Menu.Item>
-            <Menu.Item key="3">电流传感器</Menu.Item>
-            <Menu.Item key="4">振动传感器</Menu.Item>
+          <SubMenu key="sub1" icon={<UserOutlined />} title="设计元件库">
+            <Menu.Item key="1">材料库</Menu.Item>
+            <Menu.Item key="2">传感器库</Menu.Item>
+            <Menu.Item key="3">成品件库</Menu.Item>
+            <Menu.Item key="4">自制件库</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
             <Menu.Item key="5">option5</Menu.Item>
@@ -69,17 +69,21 @@ export default function Component1() {
             minHeight: 280
           }}
         >
-          传感器简介
+          
           <div className="App-page1-01">
-              <Sensor_describe_text />;
+               <p>传感器简介</p>
+               <Sensor_describe_text />
+          </div> 
+
+          <div className="App-page1-02">
+               <p>传感器外形照片</p>
+                <Sensor_describe_picture />
           </div>
-          传感器产品资料
-          <div className="App-page1-01">
-              <Sensor_describe_file />;
-          </div>
-            传感器外形照片
-          <div className="App-page1-01">
-                <Sensor_describe_picture />;
+          <div className="App-page1-03">
+              <p>传感器产品资料</p>
+              <Sensor_describe_file />
+              <p>传感器数模</p>
+              <Sensor_describe_file />
           </div>
         </Content>
       </Layout>

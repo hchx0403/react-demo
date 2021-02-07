@@ -6,7 +6,7 @@ const { TextArea } = Input;
 export default function Sensor_descibe_text() {
     return (
         <div>
-            <TextArea rows={4} />;
+            <TextArea rows={10} />
         </div>
     )
 }

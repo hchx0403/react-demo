@@ -38,12 +38,28 @@
 }
 
 .App-page1-01 {
-  background-color: #f9fafd;
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
+  background-color: #e8eaf1;
+  height: 60%;
+  width: 40%;
+  float: left;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(12, 1, 1);
+}
+.App-page1-02 {
+  margin-left: 5%;
+  background-color: #e8eaf1;
+  height: 60%;
+  width: 40%;
+  float: left;
+  font-size: calc(10px + 2vmin);
+  color: rgb(12, 1, 1);
+}
+.App-page1-03 {
+  background-color: #e8eaf1;
+  margin-top: 2%;
+  height: 35%;
+  width: 85%;
+  float: left;
+  font-size: 15px;
+  color: rgb(12, 1, 1);
 }

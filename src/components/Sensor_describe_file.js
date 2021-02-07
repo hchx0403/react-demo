@@ -25,7 +25,7 @@ export default function Sensor_describe() {
         <div>
             <Upload {...props}>
                 <Button icon={<UploadOutlined />}>Click to Upload</Button>
-            </Upload>,
+            </Upload>
         </div>
     )
 }
